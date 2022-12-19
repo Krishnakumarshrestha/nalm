@@ -39,7 +39,7 @@ age <- function(dob,current=Sys.Date()) {
 
 
 
-  if(lubridate::is.Date(dob)==T & lubridate::is.Date(current)==T)
+  if(is.Date(dob)==T & is.Date(current)==T)
   {
     return(trunc((dob %--% current) / years(1)))
 
