@@ -12,3 +12,16 @@ devtools::install_github("krishnakumarshrestha/nalm")
 ```
 
 \`
+
+## Access Mortality data set
+
+The `nalm` package includes a data frame containing age and its corresponding mortality rate
+
+```{r}
+library(nalm)
+?nalm2009
+
+df<- nalm2009()
+head(df,10:20)
+
+```
