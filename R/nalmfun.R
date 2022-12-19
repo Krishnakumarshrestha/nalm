@@ -53,4 +53,34 @@ age <- function(dob,current=Sys.Date()) {
 }
 
 
+#' Change all date in standard format if it is in character
+#'
+#'This function return standard format date if date is in character. if function fails to identify the date it returns the todays date
+#'
+#' @author Krishna Kumar Shrestha
+#' @import readr
+#' @import dplyr
+#' @import lubridate
+#' @param date : date that needs to be changed (must be character)
+#' @return date
+#' @export
+#'
+#' @examples
+#' df<- c("1996-10-10","12-10/1996")
+#' date_clean(df)
 
+
+
+
+date_clean = function(date)
+{
+ convert= case_when(
+    !is.na(mdy(date))~ mdy(date),
+    !is.na(dmy(date))~dmy(date),
+    !is.na(ymd(date))~ymd(date),
+    TRUE~Sys.Date()
+
+  )
+  return(convert)
+
+}
