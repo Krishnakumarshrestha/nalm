@@ -34,7 +34,7 @@ nalm2009 <- function() {
 #' df<- c(as.Date("1996-10-10"),as.Date("1995-10-10"))
 #' age(df,as.Date("2021-02-10"))
 #' age(df)
-library(lubridate)
+
 age <- function(dob,current=Sys.Date()) {
 
 
