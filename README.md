@@ -1,5 +1,14 @@
-<!-- badges: start -->
+# nalm
 
-[![R-CMD-check]([https://github.com/Krishnakumarshrestha/nalm/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Krishnakumarshrestha/nalm/actions/workflows/R-CMD-check.yaml)](https://github.com/mattheaphy/actxps/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/mattheaphy/actxps/actions/workflows/R-CMD-check.yaml))
+nalm package is build for providing Nepal Mortality table of 2009 and contain few helpful function which is used frequently
 
-<!-- badges: end -->
+## Installation
+
+You can install the development version of `nalm` from [GitHub](https://github.com/) with :
+
+```{r}
+# Install.packages("devtools")
+devtools::install_github("krishnakumarshrestha/nalm")
+```
+
+\`
