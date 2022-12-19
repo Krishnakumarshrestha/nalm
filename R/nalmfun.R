@@ -17,9 +17,40 @@ nalm2009 <- function() {
 
 
 
+#' Calculate age from date of birth
+#'
+#'This function return age of the person based on date of birth
+#'
+#' @author Krishna Kumar Shrestha
+#' @import readr
+#' @import dplyr
+#' @import lubridate
+#' @param dob : Date of birth (compulsory)
+#' @param current: Date as which you want to calculate age at . By default its current date
+#' @return integer
+#' @export
+#'
+#' @examples
+#' df<- c(as.Date("1996-10-10"),as.Date("1995-10-10"))
+#' age(df,as.Date("2021-02-10"))
+#' age(df)
+
+age <- function(dob,current=Sys.Date()) {
 
 
 
+  if(is.Date(dob)==T & is.Date(current)==T)
+  {
+    return(trunc((dob %--% current) / years(1)))
+
+  }
+
+  else
+  {
+    return(1)
+  }
+
+}
 
 
 
