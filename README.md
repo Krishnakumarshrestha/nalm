@@ -25,3 +25,18 @@ df<- nalm2009()
 head(df,10:20)
 
 ```
+
+## age function
+
+This function is used to calculate age given that birth date is pass on
+
+```{r}
+dob=as.Date("1996-10-10")
+
+age(dob)
+
+?age
+
+
+
+```
